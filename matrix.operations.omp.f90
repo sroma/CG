@@ -45,7 +45,7 @@ end function multmat
 function multmv(A,v)
 real*8, dimension(:,:), intent(in) :: A
 real*8, dimension(:), intent(in) :: v
-real*8, dimension(size(v))  :: multmv
+real*8, dimension(size(A, dim = 1))  :: multmv
 integer :: i,j,m,n
 
 multmv = 0.
